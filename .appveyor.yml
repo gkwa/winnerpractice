@@ -2,7 +2,8 @@ image: Ubuntu
 stack: python 3.9
 install:
 - pip install --quiet --progress-bar=off --requirement requirements.txt
-- docker run --rm --detach -p 4445:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome
+# - docker run --rm --detach -p 4445:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome
+- docker run --rm --detach -p 4445:4444 -p 7900:7900 --shm-size 2g selenium/standalone-chrome:beta
 test_script:
 - sleep 1m
 - python test.py
