@@ -1,6 +1,6 @@
 image: Ubuntu
 
-stack: python 3
+stack: python 3.9
 
 install:
 - pip install --progress-bar=off --requirement requirements.txt
