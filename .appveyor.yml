@@ -1,9 +1,9 @@
 image: Ubuntu
 
 install:
-- echo hello
+- docker run --rm --detach -p 4445:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome
 
 test_script:
-- echo hello
+- docker run --rm --detach -p 4445:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome
 
 build: off
