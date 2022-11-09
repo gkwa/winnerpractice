@@ -1,4 +1,5 @@
 image: Ubuntu
+build: off
 stack: python 3.9
 init:
 - image=selenium/standalone-chrome:beta
@@ -11,4 +12,3 @@ install:
 test_script:
 - sleep 1m
 - python test.py
-build: off
