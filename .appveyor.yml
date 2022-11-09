@@ -1,6 +1,6 @@
 image: Ubuntu
 
-stack: python 3.9
+stack: python 3.11
 
 install:
 - pip install --requirement requirements.txt
