@@ -3,7 +3,7 @@ image: Ubuntu
 stack: python 3
 
 install:
-- pip install --requirement requirements.txt
+- pip install --progress-bar=off --requirement requirements.txt
 - docker run --rm --detach -p 4445:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome
 
 test_script:
