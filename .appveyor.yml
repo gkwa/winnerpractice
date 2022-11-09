@@ -4,6 +4,6 @@ install:
 - docker run --rm --detach -p 4445:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome
 
 test_script:
-- docker run --rm --detach -p 4445:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome
+- python test.py
 
 build: off
