@@ -1,10 +1,10 @@
 image: Ubuntu
 
 install:
-- pip install --requirement requirements.txt
+- pip3 install --requirement requirements.txt
 - docker run --rm --detach -p 4445:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome
 
 test_script:
-- python test.py
+- python3 test.py
 
 build: off
