@@ -15,8 +15,11 @@ if not PASSWORD:
 
 chrome_options = selenium.webdriver.ChromeOptions()
 
+endpoint = "http://172.17.0.2:4444"
+endpoint = "http://127.0.0.1:4445"
+
 driver = selenium.webdriver.Remote(
-    command_executor="http://localhost:4445", options=chrome_options
+    command_executor=endpoint, options=chrome_options
 )
 
 driver.get("https://my.ultramobile.com/account/summary")
