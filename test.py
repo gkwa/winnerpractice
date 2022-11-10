@@ -22,6 +22,10 @@ driver = selenium.webdriver.Remote(
     command_executor=endpoint, options=chrome_options
 )
 
+driver.get("https://my.ultramobile.com")
+
+time.sleep(5)
+
 driver.get("https://my.ultramobile.com/account/summary")
 
 xpath = "//input[@placeholder='Username or Phone Number']"
