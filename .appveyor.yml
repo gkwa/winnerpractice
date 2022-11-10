@@ -2,8 +2,8 @@ image: Ubuntu
 build: off
 stack: python 3.9
 init:
-- image=selenium/standalone-chrome:beta
 - image=selenium/standalone-chrome
+- image=selenium/standalone-chrome:beta
 install:
 - pip install --quiet --progress-bar=off --requirement requirements.txt
 - docker pull $image
