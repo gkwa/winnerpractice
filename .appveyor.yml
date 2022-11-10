@@ -8,7 +8,7 @@ install:
 - pip install --quiet --progress-bar=off --requirement requirements.txt
 - docker pull $image
 # - docker run --rm --detach -p 4445:4444 -v /dev/shm:/dev/shm $image
-- docker run --rm --detach -p 4445:4444 -p 7900:7900 --shm-size 2g $image
+- docker run --rm -p 4445:4444 -p 7900:7900 --shm-size 2g $image &
 test_script:
 - sleep 1m
 - python test.py
